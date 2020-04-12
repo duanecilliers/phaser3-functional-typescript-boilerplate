@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const paths = require('./paths')
 const pkg = require('../package.json')
 
@@ -89,7 +90,7 @@ module.exports = (env, options) => {
       }),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
-      // ])
+      new BundleAnalyzerPlugin()
     ]
   }
 }

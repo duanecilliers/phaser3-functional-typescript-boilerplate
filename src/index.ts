@@ -5,7 +5,7 @@ import gameConfig from 'configs/gameConfig'
 import BootScene from 'scenes/Boot'
 import LoadScene from 'scenes/Load'
 import Game from 'scenes/Game'
-// import resizeCanvas from 'utils/resizeCanvas'
+import resizeCanvas from 'utils/resizeCanvas'
 import createMessageBus from 'core/createMessageBus'
 import store from './store'
 
@@ -22,7 +22,5 @@ store.messageBus = createMessageBus()
 const game = new Phaser.Game(phaserConfig)
 
 window.onload = function () {
-  console.log('document ready')
-
-  // window.addEventListener('resize', resizeCanvas)
+  window.addEventListener('resize', resizeCanvas)
 }

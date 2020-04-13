@@ -6,7 +6,6 @@ const resizeCanvas = function resizeCanvasFunc() {
   const windowHeight = window.innerHeight
   const windowRatio = windowWidth / windowHeight
   const gameRatio = gameConfig.GAME.VIEWWIDTH / gameConfig.GAME.VIEWHEIGHT
-  console.log('canvas', canvas)
   if (windowRatio < gameRatio) {
     canvas.style.width = `${windowWidth}px`
     canvas.style.height = `${windowWidth / gameRatio}px`
